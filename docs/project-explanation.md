@@ -1,6 +1,6 @@
 # Aperture: project explanation
 
-**Status, 11 November 2026:** the interface, backend, persistence, retrieval and live generation layers are implemented and tested. On 11 November the approved free-tier provider project was verified and two complete synthetic-candidate interviews ran with real generation (grounded questions, validated citations, summaries, export, deletion), and the end-to-end demo video was recorded against the production app. This document still requires Rohan's review before any submission.
+**Status, 11 November 2026:** the interface, backend, persistence, retrieval and live generation layers are implemented and tested. On 11 November the approved free-tier provider project was verified and two complete synthetic-candidate interviews ran with real generation (grounded questions, validated citations, summaries, export, deletion), and the end-to-end demo video was recorded against the production app. Submission was authorised by Rohan on 11 November; receipt has not yet been verified.
 
 ## What Aperture is
 
@@ -101,7 +101,7 @@ Only made-up candidate details are used in this prototype. The provider never re
 
 ## Contribution record
 
-Aperture was built with substantial AI assistance under Rohan's direction and review. No claim is made that it was written unaided; he reviews and understands the implementation before anything is submitted. The textbook and embedding model remain third-party materials and are not relicensed as part of this project's code.
+Aperture was implemented with substantial AI assistance at Rohan's request. He set the design direction and authorised provider testing and submission. This does not imply unaided authorship or mastery of the implementation. The textbook and embedding model remain third-party materials and are not relicensed as part of this project's code.
 
 ## References
 
