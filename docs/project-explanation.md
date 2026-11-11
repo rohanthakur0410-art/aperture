@@ -1,10 +1,10 @@
 # Aperture: project explanation
 
-**Status, 11 November 2026:** the interface, backend, persistence, retrieval and live generation layers are implemented and tested. On 11 November the approved free-tier provider project was verified and two complete synthetic-candidate interviews ran with real generation (grounded questions, validated citations, summaries, export, deletion), and the end-to-end demo video was recorded against the production app. Submission was authorised by Rohan on 11 November; receipt has not yet been verified.
+**Status, 11 November 2026:** the interface, backend, persistence, retrieval and live generation layers are implemented and tested. On 11 November live provider generation was verified using synthetic data and two complete synthetic-candidate interviews ran with real generation (grounded questions, validated citations, summaries, export, deletion), and the end-to-end demo video was recorded against the production app. Submission was authorised by Rohan on 11 November; receipt has not yet been verified.
 
 ## What Aperture is
 
-Aperture is an AI-powered, role-based candidate screening system. It reads a candidate's resume, chooses a technical role, and runs a structured four-question interview in which every question is generated against passages retrieved from a prescribed textbook. After the fourth answer it produces a learning summary tied to the same sources, plus a full transcript that can be exported as JSON.
+Aperture is an AI-powered, role-based candidate screening system. It reads a candidate's resume, lets the candidate choose a technical role, and runs a structured four-question interview in which every question is generated against passages retrieved from a prescribed textbook. After the fourth answer it produces a learning summary tied to the same sources, plus a full transcript that can be exported as JSON.
 
 The design goal is that no question is a template. Each question comes from a retrieval step over the textbook, conditioned on the candidate's background, the role, and the answers given so far, and every generated question must cite the exact passages it was grounded in.
 
@@ -87,7 +87,7 @@ The layout is a three-stage editorial flow: a plum side rail carries progress, t
 - Eleven backend tests cover upload safety limits, consent and role validation, disconnected-provider behavior, the full session lifecycle, export and deletion, answer idempotency and overwrite rejection, provider failure and quota errors, citation rejection, raw-resume exclusion from provider payloads, incomplete-index gating and chunk overlap. All provider calls in tests are isolated fixtures.
 - A scripted-fixture browser pass completed the full journey (four answers, summary, transcript, reload recovery, export, deletion) with real local retrieval and no JS errors, at desktop and mobile widths with no horizontal overflow.
 - A fresh isolated Python environment installs and passes all tests; a fresh npm install builds with zero audit findings. Dependency versions are pinned and a full lock file is included.
-- Live provider generation was verified on 11 November (free tier, synthetic data only) and the real end-to-end demo video is recorded. Remaining gate: Rohan's review, then any release steps, each with explicit approval.
+- Live provider generation was verified on 11 November (synthetic data only) and the real end-to-end demo video is recorded. The source code and demonstration materials are available for review; application receipt has not been verified.
 
 ## Privacy and safety
 
